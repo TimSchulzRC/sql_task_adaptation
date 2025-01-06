@@ -1,0 +1,1052 @@
+[
+    {
+        "tasks": [
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.47368421052631576,
+                        0.47368421052631576,
+                        0.7142857142857143
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.2857142857142857,
+                        0.47368421052631576,
+                        0.47368421052631576
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.782608695652174,
+                        0.7142857142857143,
+                        0.7142857142857143
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        0.7142857142857143,
+                        0.09090909090909091
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.8305084745762712,
+                        0.47368421052631576,
+                        0.47368421052631576
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        0,
+                        0.47368421052631576
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.6153846153846154,
+                        0.09090909090909091,
+                        0.47368421052631576
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.782608695652174,
+                        0.09090909090909091,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.8305084745762712,
+                        0.6153846153846154,
+                        0.47368421052631576
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        0.6153846153846154,
+                        0.6153846153846154
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0,
+                        0.09090909090909091,
+                        0.6153846153846154
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        0.6153846153846154,
+                        0.8305084745762712
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.782608695652174,
+                        0.2857142857142857,
+                        0.8305084745762712
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.7142857142857143,
+                        0.2857142857142857,
+                        0.47368421052631576
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0,
+                        0.6153846153846154,
+                        0.7142857142857143
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        0.6153846153846154,
+                        0.47368421052631576
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.782608695652174,
+                        0.47368421052631576,
+                        0.8305084745762712
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.8305084745762712,
+                        0.782608695652174,
+                        0.7142857142857143
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.47368421052631576,
+                        0.782608695652174,
+                        0.8305084745762712
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        0.2857142857142857,
+                        0.2857142857142857
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0,
+                        0.2857142857142857,
+                        0
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.47368421052631576,
+                        0.09090909090909091,
+                        0.6153846153846154
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.6153846153846154,
+                        0.2857142857142857,
+                        0.7142857142857143
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0,
+                        0.47368421052631576,
+                        0.7142857142857143
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.47368421052631576,
+                        0.2857142857142857,
+                        0.09090909090909091
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0,
+                        0.09090909090909091,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0,
+                        0.782608695652174,
+                        0
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.7142857142857143,
+                        0.8305084745762712,
+                        0.09090909090909091
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0,
+                        0.47368421052631576,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.8305084745762712,
+                        0.8305084745762712,
+                        0
+                    ]
+                }
+            ]
+        ],
+        "competencies": [
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0,
+                        1,
+                        0.8313673599594109
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.9250551712797703,
+                        1,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0,
+                        0.8191197406608283,
+                        1
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0,
+                        1,
+                        0.8313673599594109
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.9250551712797703,
+                        1,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        0.8191197406608283,
+                        1
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0,
+                        1,
+                        0.8313673599594109
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.9250551712797703,
+                        1,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        0.8191197406608283,
+                        1
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        1,
+                        0.8313673599594109
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.9250551712797703,
+                        1,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        0.8191197406608283,
+                        1
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        1,
+                        0.8313673599594109
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.9250551712797703,
+                        1,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        0.8191197406608283,
+                        1
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        1,
+                        0.8313673599594109
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.9250551712797703,
+                        1,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        0.8191197406608283,
+                        1
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        1,
+                        0.8313673599594109
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.9250551712797703,
+                        1,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        0.8191197406608283,
+                        1
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        1,
+                        0.8313673599594109
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.9250551712797703,
+                        1,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        0.8191197406608283,
+                        1
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        1,
+                        0.8313673599594109
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.9250551712797703,
+                        1,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        0.8191197406608283,
+                        1
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        1,
+                        0.8313673599594109
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.9250551712797703,
+                        1,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        0.8305084745762712,
+                        1
+                    ]
+                }
+            ]
+        ],
+        "scaffolding_bonuses": [
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.11155798406603584,
+                        0.13071490532456412,
+                        0.038872027008637455
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.035295846016123886,
+                        0.13223986686711423,
+                        0.1431346818557316
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.1249422512852821,
+                        0.11798134288573928,
+                        0.12988277316660274
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.025855345222241158,
+                        0.1169886197864474,
+                        0.08442587805169618
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.13939653209545477,
+                        0.09758777811040709,
+                        0.11181241368803752
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.12050022403222155,
+                        0.04193553650674313,
+                        0.17385268140055418
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.13906983265673184,
+                        0.056143565949940744,
+                        0.10272367074609501
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.010709403029081827,
+                        0.08028897087811282,
+                        0.08482350469682404
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.10770028278040225,
+                        0.2,
+                        0.08078928931475765
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.13917132519355557,
+                        0.1399880178471091,
+                        0.07910393690127085
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.13679160592197878,
+                        0.13274792661503643,
+                        0.08987832662481493
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.0713217792627543,
+                        0.15375739904545485,
+                        0.07456716472701569
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0,
+                        0.14840797149456425,
+                        0.13036996142564947
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.12352810232232687,
+                        0.05715084616724651,
+                        0.11815506765400448
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.0739239973984491,
+                        0.14111383384607717,
+                        0.1148962556938781
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.1485191712993032,
+                        0.13067484521811557,
+                        0.1349443547928047
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.1498499702900672,
+                        0.1007048216456122,
+                        0.10576997313638212
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.055645259456704864,
+                        0.12477049575763503,
+                        0.13488308151926948
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.11959913439793056,
+                        0.01580678494836145,
+                        0.09289622430910492
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.041288497508950056,
+                        0.10746061844813119,
+                        0.1310397269196789
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.11515680295466102,
+                        0.08532334893606389,
+                        0.09767526472271224
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.08410774662347999,
+                        0.098666526116048,
+                        0.1553902981898589
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.12603764648540797,
+                        0.08275759603591798,
+                        0.12245145208320116
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0,
+                        0.07125791756183461,
+                        0.03647757807644368
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.07719880209455589,
+                        0.06061627668857294,
+                        0.060389598962787415
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.03388073247718831,
+                        0.17988446341295206,
+                        0.1450861857285548
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.07184112072073542,
+                        0.12031708468608307,
+                        0.1368212209039691
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.10713481611068063,
+                        0.11998253811330012,
+                        0.17349388872651034
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0.09930607502457633,
+                        0.057448415594065716,
+                        0.11539472519532533
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.08253131116853758,
+                        0.041874970021232166,
+                        0.09177486088933592
+                    ]
+                }
+            ]
+        ],
+        "deltas": [
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        0,
+                        0
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0.09090909090909091,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ],
+            [
+                {
+                    "category": "join",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "category": "nesting",
+                    "syntaxElementValues": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "category": "predicates",
+                    "syntaxElementValues": [
+                        0,
+                        0.011388733915442928,
+                        0
+                    ]
+                }
+            ]
+        ]
+    }
+]
