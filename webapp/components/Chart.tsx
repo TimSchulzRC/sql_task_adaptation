@@ -1,10 +1,7 @@
 "use client";
-import { aggregateValueStructure } from "@/util/helper";
-import {
-  addValueStructuresElementwise,
-  setupAndExecuteSimulation,
-  simplifiedDqlPartialCompetencySyntaxMap,
-} from "@/util/sql_task_adaptation";
+import { SimulationLog } from "@/types/sql_task_adaptation";
+import { getAggregatedPartialCompetency } from "@/util/helper";
+import { simplifiedDqlPartialCompetencySyntaxMap } from "@/util/sql_task_adaptation";
 import {
   CategoryScale,
   Chart as ChartJS,
@@ -29,36 +26,14 @@ ChartJS.register(
   Legend
 );
 
-export default function Chart() {
-  const simParamTaskCount = 10;
-  const simParamLearnerCount = 1;
+export default function Chart({
+  simulationLog,
+}: {
+  simulationLog: SimulationLog;
+}) {
   const simParamDqlModel = simplifiedDqlPartialCompetencySyntaxMap;
 
-  const simulationLog = setupAndExecuteSimulation(
-    simParamTaskCount,
-    simParamLearnerCount,
-    simParamDqlModel
-  );
-
   const learnerSimLog = simulationLog[0];
-
-  const labels = Array(learnerSimLog.tasks.length)
-    .fill(0)
-    .map((el, i) => i);
-
-  const deltaDatasets = simParamDqlModel.map((category, index) => {
-    return {
-      label: category.category,
-      data: learnerSimLog.deltas.map((delta) =>
-        delta[index].syntaxElementValues.reduce((acc, curr) => acc + curr, 0)
-      ),
-    };
-  });
-
-  const deltaData = {
-    labels: labels,
-    datasets: deltaDatasets,
-  };
 
   const colors = ["red", "blue", "green", "yellow"];
 
@@ -66,7 +41,7 @@ export default function Chart() {
     return {
       label: category.category + " (competency)",
       data: learnerSimLog.competencies.map((competency) =>
-        aggregateValueStructure(competency, index)
+        getAggregatedPartialCompetency(competency, index)
       ),
       borderColor: colors[index],
     };
@@ -74,17 +49,15 @@ export default function Chart() {
 
   const compenteciesWithBonusesDatasets = simParamDqlModel.map(
     (category, index) => {
+      const aggregatedCompetencies = learnerSimLog.competencies.map(
+        (competency) => getAggregatedPartialCompetency(competency, index)
+      );
+      const aggregatedBonuses = learnerSimLog.scaffolding_bonuses.map((bonus) =>
+        getAggregatedPartialCompetency(bonus, index)
+      );
       return {
         label: category.category + " (competency with bonuses)",
-        data: learnerSimLog.scaffolding_bonuses.map((bonus) =>
-          aggregateValueStructure(
-            addValueStructuresElementwise(
-              learnerSimLog.competencies[index],
-              bonus
-            ),
-            index
-          )
-        ),
+        data: aggregatedCompetencies.map((c, i) => c + aggregatedBonuses[i]),
         borderDash: [5, 5],
         borderColor: colors[index],
       };
@@ -95,7 +68,7 @@ export default function Chart() {
     return {
       label: category.category + " (task)",
       data: learnerSimLog.tasks.map((task) =>
-        aggregateValueStructure(task, index)
+        getAggregatedPartialCompetency(task, index)
       ),
       showLine: false,
       pointRadius: 4,
@@ -104,11 +77,9 @@ export default function Chart() {
     };
   });
 
-  console.log("competencyDatasets", competencyDatasets);
-  console.log(
-    "compenteciesWithBonusesDatasets",
-    compenteciesWithBonusesDatasets
-  );
+  const labels = Array(learnerSimLog.tasks.length)
+    .fill(0)
+    .map((el, i) => i);
 
   const datasets = [
     ...competencyDatasets,

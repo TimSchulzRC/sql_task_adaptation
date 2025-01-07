@@ -243,7 +243,12 @@ function executeSimulation(
       // - delta-Historie <- ggf. calc_aggregated_competency rekursiv anwenden, damit ein skalarer Wert je Aufgabe entsteht
       // - parameter-Historie
       // ToDo: Optimierungsalgorithmus einsetzen und Informationen übergeben
+
+      const prevTasks = simulationLog[j].tasks;
+      console.log(simulationLog[j].deltas);
+
       const task = generateRandomTask(dqlModel);
+
       const taskComplexity: SingleLearnerTask = task.map((category) => {
         return {
           category: category.category,
