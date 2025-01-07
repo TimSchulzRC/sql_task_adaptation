@@ -91,11 +91,6 @@ def add_delta_to_competency(competency: dict[str, list[str]], delta: dict[str, l
     return {key: [competency[key][i] + delta[key][i] for i in range(len(competency[key]))] for key in competency}
 
 
-def random_task_parameters_per_task_per_learner(dql_model: dict[str, list[str]], task_count: int, learner_count: int):
-    return [
-        [create_random_task_parameters(dql_model) for _ in range(learner_count)] for _ in range(task_count)]
-
-
 def simulate_task_adaptation(task_count: int, learner_count: int, dql_model: dict[str, list[str]]):
 
     learner_population = create_learner_population(
@@ -190,93 +185,19 @@ learner_count = 1
 simulationLog = simulate_task_adaptation(
     task_count, learner_count, dql_model)
 
-# funciton that calculates the sum of all deltas for a learner over all tasks
-
-
-def sum_deltas(simulationLog: dict[str, list[list[float]]], learnerId: int):
-    deltas = simulationLog[learnerId]["deltas"]
-    sum = 0
-    for delta in deltas:
-        for key in delta:
-            # if a value greater than 0 is in delta[key], add 1 to sum
-            if any(value > 0 for value in delta[key]):
-                sum += 1
-    return sum
-
-
-print(sum_deltas(simulationLog, 0))
-
 for i in range(learner_count):
     plot_simulation_log(simulationLog, dql_model, i)
 
 
-# plot competency over time
-# plt.plot(range(task_count), simulationLog["competencies"])
-
-# printer.pprint(
-#     learner_population["scaffolding_competence_bonus_per_step_and_learner"])
-
-# random_task_parameters = create_random_task_parameters(dql_model)
-
-# print(calc_task_complexities(create_task_with_parameters(
-#     dql_model, random_task_parameters)))
-
-
-# c1 = calc_complexity_for_task(create_random_task(dql_model))
-# c2 = calc_complexity_for_task(create_random_task(dql_model))
-# c3 = calc_complexity_for_task(create_random_task(dql_model))
-# c4 = calc_complexity_for_task(create_random_task(dql_model))
-# c5 = calc_complexity_for_task(create_random_task(dql_model))
-# c6 = calc_complexity_for_task(create_random_task(dql_model))
-# c7 = calc_complexity_for_task(create_random_task(dql_model))
-# c8 = calc_complexity_for_task(create_random_task(dql_model))
-# c9 = calc_complexity_for_task(create_random_task(dql_model))
-# c10 = calc_complexity_for_task(create_random_task(dql_model))
+# def sum_deltas(simulationLog: dict[str, list[list[float]]], learnerId: int):
+#     deltas = simulationLog[learnerId]["deltas"]
+#     sum = 0
+#     for delta in deltas:
+#         for key in delta:
+#             # if a value greater than 0 is in delta[key], add 1 to sum
+#             if any(value > 0 for value in delta[key]):
+#                 sum += 1
+#     return sum
 
 
-# # print(c1, c2, c3, c4, c5, c6, c7, c8, c9, c10)
-
-# k1 = random.random()
-# k2 = random.random()
-# k3 = random.random()
-# k4 = random.random()
-# k5 = random.random()
-# k6 = random.random()
-# k7 = random.random()
-# k8 = random.random()
-# k9 = random.random()
-# k10 = random.random()
-
-# # print(k1, k2, k3, k4, k5, k6, k7, k8, k9, k10)
-
-# t1 = c1 + 0.1
-# t2 = c2 + 0.1
-# t3 = c3 + 0.1
-# t4 = c4 + 0.1
-# t5 = c5 + 0.1
-# t6 = c6 + 0.1
-# t7 = c7 + 0.1
-# t8 = c8 + 0.1
-# t9 = c9 + 0.1
-# t10 = c10 + 0.1
-
-# d1 = 0 if (c1 <= k1 or c1 > k1 + t1) else k1 - c1
-# d2 = 0 if (c2 <= k2 or c2 > k2 + t2) else k2 - c2
-# d3 = 0 if (c3 <= k3 or c3 > k3 + t3) else k3 - c3
-# d4 = 0 if (c4 <= k4 or c4 > k4 + t4) else k4 - c4
-# d5 = 0 if (c5 <= k5 or c5 > k5 + t5) else 1
-# d6 = 0 if (c6 <= k6 or c6 > k6 + t6) else k6 - c6
-# d7 = 0 if (c7 <= k7 or c7 > k7 + t7) else k7 - c7
-# d8 = 0 if (c8 <= k8 or c8 > k8 + t8) else k8 - c8
-# d9 = 0 if (c9 <= k9 or c9 > k9 + t9) else k9 - c9
-# d10 = 0 if (c10 <= k10 or c10 > k10 + t10) else 1
-
-# # print(d1, d2, d3, d4, d5, d6, d7, d8, d9, d10)
-
-# deltasum = d1 + d2 + d3 + d4 + d5 + d6 + d7 + d8 + d9 + d10
-
-# # print(deltasum)
-
-# # plot d in relation to the step from 1 to 10
-# # plt.plot(range(1, 11), [d1, d2, d3, d4, d5, d6, d7, d8, d9, d10])
-# # plt.savefig("d.png")
+# print(sum_deltas(simulationLog, 0))
