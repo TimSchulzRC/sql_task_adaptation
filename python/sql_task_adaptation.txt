@@ -1,11 +1,6 @@
-import os
 import random
 import matplotlib.pyplot as plt
 import numpy as np
-import tqdm
-
-task_count = 10
-learner_count = 10000
 
 
 def rgbeta(n: int, mean: float, var: float, min: float = 0, max: float = 1) -> float:
@@ -37,10 +32,6 @@ def calc_complexity(frequency, regulation=0.5, weight=1):
 
 def create_random_task(dql_model: dict[str, list[str]]):
     return {key: [random.randint(0, 7) for _ in dql_model[key]] for key in dql_model}
-
-
-def create_optimal_task(dql_model: dict[str, list[str]], learner_competency: dict[str, list[float]], scaffolding_bonus: dict[str, list[float]]):
-    return {key: [np.clip(learner_competency[key][i] + scaffolding_bonus[key][i], 0, 1) * 7 for i in range(len(dql_model[key]))] for key in dql_model}
 
 
 def calc_task_complexities(task: dict[str, list[int]]):
@@ -93,6 +84,12 @@ def add_delta_to_competency(competency: dict[str, list[str]], delta: dict[str, l
     return {key: [competency[key][i] + delta[key][i] for i in range(len(competency[key]))] for key in competency}
 
 
+def optimize_task_parameters(dql_model: dict[str, list[str]],
+                             parameter_history: list[dict[str, list[int]]],
+                             delta_history: list[dict[str, list[float]]]) -> dict[str, list[int]]:
+    return
+
+
 def simulate_task_adaptation(task_count: int, learner_count: int, dql_model: dict[str, list[str]]):
 
     learner_population = create_learner_population(
@@ -123,10 +120,6 @@ def simulate_task_adaptation(task_count: int, learner_count: int, dql_model: dic
             #     dql_model, parameter_history, delta_history)
 
             task = create_random_task(dql_model)
-            # task = create_optimal_task(
-            #     dql_model, learner_competency, scaffolding_bonus)
-
-            # print(task)
 
             task_complexities = calc_task_complexities(task)
             delta = calculate_delta(
@@ -188,8 +181,6 @@ def plot_simulation_log(simulationLog: dict[str, list[list[float]]], dql_model: 
     plt.xlabel("Step")
     plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
     plt.tight_layout()
-    # remove old files
-    os.remove(f"sql_task_adaptation_{learnerId}.png")
     plt.savefig(
         f"sql_task_adaptation_{learnerId}.png", dpi=300, bbox_inches="tight")
 
@@ -200,75 +191,22 @@ dql_model = {
     "predicates": ["basic_operators", "logical_operators", "set_operators"]
 }
 
+task_count = 10
+learner_count = 1
 
 simulationLog = simulate_task_adaptation(
     task_count, learner_count, dql_model)
 
-# for i in range(learner_count):
-#     plot_simulation_log(simulationLog, dql_model, i)
-
-# encode params to number between 0 and 342
-def encodeParams(params):
-    return params[0]*8**2 + params[1]*8**1 + params[2]*8**0
+for i in range(learner_count):
+    plot_simulation_log(simulationLog, dql_model, i)
 
 
-sequences = []
-for dql_category in dql_model:
-    for studentId in range(len(simulationLog)):
-        tasks = []
-        solved = []
-        for taskIndex in range(task_count):
-            params = simulationLog[studentId]["tasks"][taskIndex][dql_category]
-            skillDelta = simulationLog[studentId]["deltas"][taskIndex][dql_category]
-            taskId = encodeParams(params)
-            learnEffect = any(value > 0 for value in skillDelta)
-            tasks.append(taskId)
-            solved.append(1 if learnEffect else 0 )
-            
-            
-            
-            # skillId = skillParams[0] * skillParams[1] * skillParams[2]
-            # step = [0] * (NUM_QUESTION*2)
-            # if (learneffect):
-            #     step[skillId] = 1
-            # else:
-            #     step[skillId + 342] = 1
-        sequences.append((tasks, solved))
-    
-def train_test_split(data, train_size=.7, shuffle=True):
-    if shuffle:
-        random.shuffle(data)
-    boundary = round(len(data) * train_size)
-    return data[: boundary], data[boundary:]
-
-train_sequences, test_sequences = train_test_split(sequences)
-
-
-MAX_STEP = 50
-NUM_QUESTIONS = 512
-
-
-def encode_onehot(sequences, max_step, num_questions):
-    result = []
-
-    for q, a in tqdm.tqdm(sequences, 'convert to one-hot format: '):
-        length = len(q)
-        # append questions' and answers' length to an integer multiple of max_step
-        mod = 0 if length % max_step == 0 else (max_step - length % max_step)
-        onehot = np.zeros(shape=[length + mod, 2 * num_questions])
-        for i, q_id in enumerate(q):
-            index = int(q_id if a[i] > 0 else q_id + num_questions)
-            onehot[i][index] = 1
-        result = np.append(result, onehot)
-    
-    return result.reshape(-1, max_step, 2 * num_questions)
-
-# reduce the amount of data for example running faster
-percentage = 0.05
-train_data = encode_onehot(train_sequences[: int(len(train_sequences) * percentage)], MAX_STEP, NUM_QUESTIONS)
-test_data = encode_onehot(test_sequences[: int(len(test_sequences) * percentage)], MAX_STEP, NUM_QUESTIONS)
-
-print(test_data.shape)
-
-np.save('train_data.npy', train_data)
-np.save('test_data.npy', test_data)
+# def sum_deltas(simulationLog: dict[str, list[list[float]]], learnerId: int):
+#     deltas = simulationLog[learnerId]["deltas"]
+#     sum = 0
+#     for delta in deltas:
+#         for key in delta:
+#             # if a value greater than 0 is in delta[key], add 1 to sum
+#             if any(value > 0 for value in delta[key]):
+#                 sum += 1
+#     return sum
