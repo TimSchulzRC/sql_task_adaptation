@@ -1,3 +1,5 @@
 .DS_Store
 *.npy
 *.csv
+test.txt
+train.txt
