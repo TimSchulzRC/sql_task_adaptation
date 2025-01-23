@@ -34,6 +34,9 @@ def rgbeta(n: int, mean: float, var: float, min: float = 0, max: float = 1) -> f
 def calc_complexity(frequency, regulation=0.5, weight=1):
     return (frequency * weight) ** (1 / regulation) / ((1 + (frequency * weight)) ** (1 / regulation))
 
+def calc_frequency(complexity, regulation=0.5, weight=1):
+    return (-complexity/(complexity-1))**regulation
+
 
 def create_random_task(dql_model: dict[str, list[str]]):
     return {key: [random.randint(0, 7) for _ in dql_model[key]] for key in dql_model}
@@ -211,8 +214,14 @@ simulationLog = simulate_task_adaptation(
 def encodeParams(params):
     return params[0]*8**2 + params[1]*8**1 + params[2]*8**0
 
+def train_test_split(data, train_size=.7, shuffle=True):
+    if shuffle:
+        random.shuffle(data)
+    boundary = round(len(data) * train_size)
+    return data[: boundary], data[boundary:]
 
 sequences = []
+
 for dql_category in dql_model:
     for studentId in range(len(simulationLog)):
         tasks = []
@@ -235,11 +244,6 @@ for dql_category in dql_model:
             #     step[skillId + 342] = 1
         sequences.append((tasks, solved))
     
-def train_test_split(data, train_size=.7, shuffle=True):
-    if shuffle:
-        random.shuffle(data)
-    boundary = round(len(data) * train_size)
-    return data[: boundary], data[boundary:]
 
 train_sequences, test_sequences = train_test_split(sequences)
 
